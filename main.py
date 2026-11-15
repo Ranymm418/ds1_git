@@ -1,5 +1,34 @@
 tache = []
 
+
+def ajouter_une_tache():
+    titre = input("donner le titre ").strip()
+    if len(titre) == 0:
+        print("titre invalide")
+        return False
+    tache.append(titre)
+    print("tache ajoutee avec succes ")
+
+
+def afficher_les_tache():
+    if len(tache) == 0:
+        print("la liste est vide")
+    else:
+        for n, l in enumerate(tache):
+            print("tache numero ", n + 1, ":", l)
+
+
+def rechercher_une_tache():
+    mt = input("donner un mot-clé").lower()
+    trouve = False
+    for l in tache:
+        if mt in l.lower():
+            print(l)
+            trouve = True
+    if trouve == False:
+        print("non trouvée")
+
+
 choix = -1
 while choix != 0:
     print("== Gestion des taches ==")
