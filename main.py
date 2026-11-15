@@ -47,3 +47,4 @@ while choix != 0:
         print("fermeture du programme")
     else:
         print("choix invalide")
+print("programme finaliser merci pour avoir utiliser mon programme")
